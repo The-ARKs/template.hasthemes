@@ -8,32 +8,58 @@
 // })
 
 
+const btn = document.getElementById ("togglebutton1");
+const img = document.getElementById ("img111");
 
+let isvisible = false;
 
-const image = document.getElementById("togglebutton")
-const box = document.getElementById("sidebar1")
-
-image.addEventListener("click",function(){
-if (box.style.display==="none"||box.style.display===""){
-    box.style.display = "block";
-}
+btn .addEventListener("click",function(){
+if (!isvisible){
+    img.classList.remove('slide-out');
+    img.classList.add('slide-in');
+  }
 else {
-    box.style.display ="none";
+img.classList.remove('slide-in');
+    img.classList.add('slide-out');
 }
-    });
+isvisible = !isvisible;
+
+});
+// const img1 = document.getElementById ("img111");
+// const btn1 = document.getElementById ("togglebutton2");
+// btn1.addEventListener("click",function(){
+// if (isvisible){
+//     img.classList.remove('slide-out2');
+// img.classList.add('slide-in2');
+// }
+// else {
+//       img.classList.remove('slide-in2');
+//     img.classList.add('slide-out2');
+
+//   }
+// isvisible = !isvisible;
+//     });
+   
 
 
-    const image2 = document.getElementById("togglebutton2")
-    const box2 = document.getElementById("sidebar1")
+
+
+// const img1 = document.getElementById ("img111");
+// let isvisible1 = false
+
+// btn1.addEventListener("click",function(){
+// if (isvisible){
+//     img.classList.remove('slide-out2');
+// img.classList.add('slide-in2');
+// }
+// else {
+//       img.classList.remove('slide-in2');
+//     img.classList.add('slide-out2');
+
+//   }
+// isvisible1 = isvisible;
     
-    image2.addEventListener("click",function(){
-    if (box2.style.display==="none"||box2.style.display===""){
-        box2.style.display = "block";
-    }
-    else {
-        box2.style.display ="none";
-    }
-        });
+// });
 
 
   let lastScroll = 0;
